@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:text="여기는 두번째 화면입니다."/>
         <Button
+            android:id="@+id/btnReturn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="이전 화면으로 복귀"/>

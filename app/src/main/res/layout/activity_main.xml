@@ -18,6 +18,15 @@
             android:id="@+id/btnMoveToSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="다음 화면으로 이동"/>
+            android:text="2번 화면으로 이동"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="3번 화면에 전달할 메시지"/>
+        <Button
+            android:id="@+id/btnMoveToThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3번째 화면으로 메시지 들고 이동"/>
     </LinearLayout>
 </layout>
