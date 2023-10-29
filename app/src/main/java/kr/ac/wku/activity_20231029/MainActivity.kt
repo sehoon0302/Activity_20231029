@@ -1,6 +1,7 @@
 package kr.ac.wku.activity_20231029
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -37,6 +38,20 @@ class MainActivity : AppCompatActivity() {
 
             //하나의 Intent에 여러개의 변수를 첨부 가능 (이름표만 잘 구분하자)
             myIntent.putExtra("number", inputNumber)
+
+            startActivity(myIntent)
+        }
+
+        //전화걸기 버튼 동작
+        binding.btnPhoneCall.setOnClickListener {
+            //입력한 전화번호 추출(변수 저장)
+            val inputPhoneNum = binding.edtPhoneNum.text.toString()
+
+            //어디에 전화를 걸지, 번호 정보를 기록하는 Uri
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+
+            //전화 앱에 전화번호를 들고 이동
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
 
             startActivity(myIntent)
         }
